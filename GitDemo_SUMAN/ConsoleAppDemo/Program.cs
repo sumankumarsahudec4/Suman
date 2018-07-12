@@ -25,18 +25,6 @@ namespace ConsoleAppDemo
             objEmployee.Add(new Employee() { EID = "3", Ename = "E3", ELOC = "L3d" });
 
 
-            //foreach (var item in objEmployee)
-            //{
-            //    if (item.EID== "3")
-            //    {
-            //        if (item.Ename=="E3")
-            //        {
-            //            DoMyFunc(item.Ename);
-            //        }
-            //    }
-            //}
-            //objEmployee.ForEach( item => DoMyFunc(item.EID));
-
             objEmployee.Where(x => x.EID == "3" && x.Ename == "E3").ToList().ForEach(x=> DoMyFunc(x.EID));
 
             objEmployee.Where(x => x.EID.ToString().Equals("3")).ToList().ForEach(x =>{
